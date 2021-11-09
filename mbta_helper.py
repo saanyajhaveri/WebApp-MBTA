@@ -15,7 +15,7 @@ MBTA_API_KEY = "68b2a7ae63184c6c930c23dd6940c075"
 
 def get_json(url):
     """
-    This function returns Python JSON object containing the response to that request for the purpose of either MBTA or Mapquest
+    This function returns Python JSON object containing the response for MBTA or Mapquest
     """
     f = urllib.request.urlopen(url)
     text_response = f.read().decode('utf-8')
@@ -25,7 +25,7 @@ def get_json(url):
 
 def get_lat_long(place_name):
     """
-    This function returns latitude and longitude after inputting place in Boston
+    This function returns latitude and longitude after inputting place in MA
     """
     place_name = str(place_name)
     place_name = place_name.replace(" ", "%20")
