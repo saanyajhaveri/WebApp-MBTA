@@ -1,24 +1,22 @@
-"""
-Simple "Hello, World" application using Flask
-"""
 
 from flask import Flask, render_template, request
 
 from mbta_helper import find_stop_near
 
+"""Import flask and function from mbta_helper"""
 
 app = Flask(__name__, template_folder="templates")
 
 
 @app.route('/')
 def index():
-    """This function asks for the user's location"""
+    """Header for page is referenced from template"""
     return render_template("index.html")
 
 @app.route("/POST/nearest", methods=["POST","GET"])
 def find():
     """
-    This function returns whether the location entered has a nearby stop and checks for wheelchair accessibility
+    Utilizes find_stop_near function to output station and wheelchair accessibility on Web App.
     """
     if request.method == "POST":
         place = request.form["location"]
