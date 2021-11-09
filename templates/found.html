@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MBTA Found </title>
+</head>
+
+<body>
+    <div class = "web app content">
+        <h1>MBTA Station Finder</h1>
+            <p>The nearest MBTA  
+                <span class = "results"> {{location}} </span> </p>
+            <p> <span class = "results"> {{wheelchair}} </span></p> 
+        <form name = "" action = '{{ url_for('index') }}'>
+            <input type = "submit" value = "Click here to try another location" />
+        </form>
+    </div>
+</body>
+</html>

@@ -1,10 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Amazing app to help you find nearest MBTA station</title>
+    <title>Webb app to find the nearest MBTA station based on your location in MA</title>
 </head>
-<body>
 
+<body>
+    <div class = "webcontents">
+        <h1> MBTA Station Finder 
+</h1>
+        <form method = "POST" name = "" action = '{{ url_for('find') }}'>
+                Please enter your location:
+            </p>
+            <p> 
+                <input type = "text" size = "30" name = "location" />
+            </p>
+            <p>
+                <input type = "submit" value = "Submit" />
+            </p>
+        </form>
+    </div>
 </body>
 </html>
+
